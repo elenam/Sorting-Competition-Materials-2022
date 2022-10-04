@@ -20,17 +20,13 @@ public class Group0 {
 		String inputFileName = args[0];
 		String outFileName = args[1];
 
-		// read data as strings
-		String[] data = readData(inputFileName);
+		String[] data = readData(inputFileName); // read data as strings
+		
+		String[] toSort = data.clone(); // clone the data
 
-		// clone the data
-
-		String[] toSort = data.clone();
-
-		// call the sorting method once for JVM warmup
-
-		sort(toSort);
-		// clone again
+		sort(toSort); // call the sorting method once for JVM warmup
+		
+		toSort = data.clone(); // clone again
 
 		Thread.sleep(10); // to let other things finish before timing; adds stability of runs
 
