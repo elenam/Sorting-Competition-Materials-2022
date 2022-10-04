@@ -70,39 +70,36 @@ public class Group0 {
 
 		@Override
 		public int compare(String o1, String o2) {
-			try {
-				BigDecimal i = new BigDecimal(o1);
-				try {
-					BigDecimal o = new BigDecimal(o2);
-					return i.compareTo(o);
-				} catch (Exception e) {
-					return(compareNormalAndFraction(i,o2));
+			if(o1.contains("/")){
+				if(o2.contains("/")){
+					return compareFractions(o1, o2);
+				}else{
+					return compareFractionAndDecimal(o1, o2);
 				}
-			} catch (Exception e) {
-				try {
-					BigDecimal o = new BigDecimal(o2);
-					return(compareFractionAndNormal(o1, o));
-				} catch (Exception e1) {
-					return(compareFractions(o1,o2));
+
+			}else{
+				if(o2.contains("/")){
+					return compareDecimalAndFraction(o1, o2);
+				}else{
+					return compareDecimals(o1,o2);
 				}
 			}
+
 		}
 
-
-
-		private int compareNormalAndFraction(BigDecimal bi, String fraction) {
-			if (Double.compare(bi.doubleValue(),getValueFromFraction(fraction))==0){
+		private int compareDecimalAndFraction(String o1, String fraction) {
+			if (Double.compare(Double.parseDouble(o1),getValueFromFraction(fraction))==0){
 				return -1;
 			}else{
-				return Double.compare(bi.doubleValue(),getValueFromFraction(fraction));
+				return Double.compare(Double.parseDouble(o1),getValueFromFraction(fraction));
 			}
 		}
 		
-		private int compareFractionAndNormal(String fraction,BigDecimal bi) {
-			if(Double.compare(getValueFromFraction(fraction),bi.doubleValue()) == 0){
+		private int compareFractionAndDecimal(String fraction,String o2) {
+			if(Double.compare(getValueFromFraction(fraction),Double.parseDouble(o2)) == 0){
 				return 1;
 			}else{
-				return Double.compare(getValueFromFraction(fraction),bi.doubleValue());
+				return Double.compare(getValueFromFraction(fraction),Double.parseDouble(o2));
 			}
 		}
 
@@ -116,14 +113,10 @@ public class Group0 {
 			}
 		}
 
-
-
 		private int getDenominator(String fraction) {
 			String[] sa = fraction.split("/",2);
 			return Integer.parseInt(sa[1]);
 		}
-
-
 
 		private double getValueFromFraction(String fraction) {
 			String[] sa = fraction.split("/",2);
@@ -131,8 +124,12 @@ public class Group0 {
 			double denominator = Integer.parseInt(sa[1]);
 			return (numerator/denominator);
 		}
+		private int compareDecimals(String o1, String o2) {
+			return Double.compare(Double.parseDouble(o1), Double.parseDouble(o2));
+		}
 
 	}
+	
 	private static void writeOutResult(String[] sorted, String outputFilename) throws FileNotFoundException {
 		PrintWriter out = new PrintWriter(outputFilename);
 		for (String s : sorted) {
