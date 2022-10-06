@@ -74,7 +74,7 @@ public class DataGenerator {
 		return digits.toString();
 	}
 	
-	private static int RANGE_RATIONAL = 1000;
+	private static int RANGE_RATIONAL = 100000;
 	
 	private static String generateRational() {
 		int intPart = r.nextInt(10) - 5;
