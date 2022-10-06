@@ -23,6 +23,13 @@ The Sorting Competition is a multi-lab exercise on developing the fastest sortin
 
 ## The data  <a name="data"></a>
 
+You are sorting numbers represented as decimal fractions and rational numbers. The numbers are given as strings. They are in the range [-6, 6] (non-inclusive) and may not fit into standard formats for integers and doubles. 
+
+The comparu=ison rule is as follows:
+* If two numbers are of a different value, they are compared by value. For instance, 1/3 > 0.33333. Note that the comparison is always exact: no precision is lost. 
+* If they are of exactly the same value, the decimal representation is considered “smaller” than any fraction for positive numbers and "larger" for negatives. For instance, 1/2 > 0.5, but -1/2 < -0.5. 
+* If two fractions have the exact same value then the one with the larger numerator is larger for positive numbers and smaller for negative. For instance, 1/3 < 3/9 and -1/3 > 3/9.
+
 The file [Group0.java](src/Group0.java) provides a Comparator that implements this comparison and provides some tests. Please
 consult it as needed. However, note that this is a slow implementation, and you should think of a way to make yours much faster. 
 
