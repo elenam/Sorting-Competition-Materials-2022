@@ -46,7 +46,7 @@ public class DataGenerator {
 	private static String generateDecimal() {
 		StringBuffer digits = new StringBuffer();
 		
-		int intPart = r.nextInt(10) - 5; 
+		int intPart = r.nextInt(9) - 4; 
 		digits.append(intPart);
 		digits.append(".");
 		
