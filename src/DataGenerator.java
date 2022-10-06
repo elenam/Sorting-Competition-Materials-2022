@@ -78,8 +78,8 @@ public class DataGenerator {
 	
 	private static String generateRational() {
 		int intPart = r.nextInt(10) - 5;
-		int denominator = r.nextInt(RANGE_RATIONAL) + 1; // to avoid zero
-		int numerator = r.nextInt(denominator - 2) + 1;
+		int denominator = r.nextInt(RANGE_RATIONAL) + 2; // to avoid 0 and 1
+		int numerator = r.nextInt(denominator - 1) + 1;
 		
 		int numeratorWithInt = (intPart * denominator) + numerator;
 		
