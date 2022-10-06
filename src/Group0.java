@@ -21,7 +21,7 @@ public class Group0 {
 		String inputFileName = args[0];
 		String outFileName = args[1];
 		
-		//runTests();
+		runTests();
 
 		String[] data = readData(inputFileName); // read data as strings
 		
@@ -131,9 +131,9 @@ public class Group0 {
 			if (res != 0) return res;
 			
 			if (numerator1.compareTo(new BigInteger("0")) >= 0) {
-				return -1; // for positive, the decimal is smaller
+				return 1; // for positive, the decimal is smaller
 			} else {
-				return 1; // for negative, the decimal is larger
+				return -1; // for negative, the decimal is larger
 			}
 		}
 
@@ -189,6 +189,7 @@ public class Group0 {
 		System.out.println("-2/4 and -1.5:" + comp.compareFractionAndDecimal("-2/4","-1.5"));
 		System.out.println("-2/4 and 0:" + comp.compareFractionAndDecimal("-2/4","0"));
 		System.out.println("1/2 and -0.5:" + comp.compareFractionAndDecimal("1/2","-0.5"));
+		System.out.println("1/2 and 0.5:" + comp.compareFractionAndDecimal("1/2","0.5"));
 		System.out.println("-1/2 and -0.5:" + comp.compareFractionAndDecimal("-1/2","-0.5"));
 		System.out.println("1/3 and -0.5:" + comp.compareFractionAndDecimal("1/3","-0.5"));
 		
