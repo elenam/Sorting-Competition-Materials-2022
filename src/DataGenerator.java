@@ -26,7 +26,7 @@ public class DataGenerator {
 					data[i] = generateDecimal(); 
 					break;
 				case 1:
-					data[i] = Integer.toString((r.nextInt(10) - 5)) + "/" + Integer.toString((r.nextInt(1000))+1); // This needs to change
+					data[i] = generateRational(); // This needs to change
 					break;
 				default:
 					break;
@@ -41,7 +41,7 @@ public class DataGenerator {
 		out.close();
 	}
 	
-	private static int CHANCE = 20; 
+	private static int CHANCE = 25; 
 	
 	private static String generateDecimal() {
 		StringBuffer digits = new StringBuffer();
@@ -72,6 +72,18 @@ public class DataGenerator {
 		}
 		
 		return digits.toString();
+	}
+	
+	private static int RANGE_RATIONAL = 1000;
+	
+	private static String generateRational() {
+		int intPart = r.nextInt(10) - 5;
+		int denominator = r.nextInt(RANGE_RATIONAL) + 1; // to avoid zero
+		int numerator = r.nextInt(denominator - 2) + 1;
+		
+		int numeratorWithInt = (intPart * denominator) + numerator;
+		
+		return "" + numeratorWithInt + "/" + denominator; 
 	}
 
 }
