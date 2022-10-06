@@ -3,10 +3,10 @@ import java.io.PrintWriter;
 import java.util.Random;
 
 public class DataGenerator {
+	private static int seed = 1001; // change the seed to get different data
+	private static Random r = new Random(seed);
 
 	public static void main(String[] args) throws FileNotFoundException {
-		int seed = 1001; // change the seed to get different data
-		Random r = new Random(seed);
 
 		if (args.length < 2) {
 			System.out.println(
@@ -19,16 +19,13 @@ public class DataGenerator {
 
 		String[] data = new String[n];
 
-
+		// Figure out the kind of a number:
 		for (int i = 0; i < n; ++i) {
-			switch (r.nextInt(3)) {
+			switch (r.nextInt(2)) {
 				case 0:
-					data[i] = Integer.toString((r.nextInt(10) - 5)); // This might need to change
+					data[i] = generateDecimal(); 
 					break;
 				case 1:
-					data[i] = Double.toString(r.nextDouble()*10 - 5); // This needs to change
-					break;
-				case 2:
 					data[i] = Integer.toString((r.nextInt(10) - 5)) + "/" + Integer.toString((r.nextInt(1000))+1); // This needs to change
 					break;
 				default:
@@ -42,6 +39,39 @@ public class DataGenerator {
 			out.println(s);
 		}
 		out.close();
+	}
+	
+	private static int CHANCE = 20; 
+	
+	private static String generateDecimal() {
+		StringBuffer digits = new StringBuffer();
+		
+		int intPart = r.nextInt(10) - 5; 
+		digits.append(intPart);
+		digits.append(".");
+		
+		while(true) {
+			// roll the dice
+			int roll = r.nextInt(CHANCE);
+			if (roll == 0) { // ending
+				if (digits.length() == 2) {
+					digits.deleteCharAt(1); // positive integer, remove the decimal point
+				}
+				else if ((digits.length() == 3) && (digits.charAt(0) == '-')) {
+					digits.deleteCharAt(2); // negative integer, remove the decimal point
+				}
+				// adding a digit after a zero, except when it's an integer
+				else if (digits.charAt(digits.length() - 1) == '0') { 
+					// need to add the last non-zero digit
+					digits.append(r.nextInt(9) + 1);
+				}
+				break;
+			}
+			// adding a digit 
+			digits.append(r.nextInt(10));
+		}
+		
+		return digits.toString();
 	}
 
 }
