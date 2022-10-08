@@ -21,7 +21,7 @@ public class Group0 {
 		String inputFileName = args[0];
 		String outFileName = args[1];
 		
-		runTests();
+		//runTests();
 
 		String[] data = readData(inputFileName); // read data as strings
 		
