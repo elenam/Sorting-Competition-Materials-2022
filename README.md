@@ -23,7 +23,7 @@ The Sorting Competition is a multi-lab exercise on developing the fastest sortin
 
 ## The data  <a name="data"></a>
 
-You are sorting numbers represented as decimal fractions and rational numbers. The numbers are given as strings. They are in the range [-6, 6] (non-inclusive) and may not fit into standard formats for integers and doubles. 
+You are sorting numbers represented as decimal fractions and rational numbers. The numbers are given as strings. They are in the range (-5, 5) (non-inclusive) and may not fit into standard formats for integers and doubles. 
 
 The comparison rule is as follows:
 * If two numbers are of a different value, they are compared by value. For instance, 1/3 > 0.33333. Note that the comparison is always exact: no precision is lost. 
