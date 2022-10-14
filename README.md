@@ -86,4 +86,8 @@ I will post a script for running this program (with a correctness check and all)
 
 The first preliminary competition will be run on Thursday October 13th in the lab. The purpose of it is mostly to check the correctness and to get a sense for your timing. 
 
+The second preliminary round will be in the lab on Thursday October 20th. 
+
+The final competition will be on Thursday November 2nd in the lab. 
+
 The dates for subsequent competitions and the deadlines for other related assignments (code review and presentations) will be announced later. 
