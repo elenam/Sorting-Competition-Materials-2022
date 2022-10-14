@@ -90,4 +90,4 @@ The second preliminary round will be in the lab on Thursday October 20th.
 
 The final competition will be on Thursday November 2nd in the lab. 
 
-The dates for subsequent competitions and the deadlines for other related assignments (code review and presentations) will be announced later. 
+The dates for other related assignments (code review and presentations) will be announced later. 
