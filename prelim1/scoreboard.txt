@@ -1,0 +1,16 @@
+group 5 took place  1. The sum of places is 2, the sum of medians is 798.0
+
+group 3 took place  2. The sum of places is 4, the sum of medians is 954.0
+
+group 0 took place  3. The sum of places is 7, the sum of medians is 3810.0
+
+group 7 took place  4. The sum of places is 7, the sum of medians is 3974.0
+
+group 1 took place  5. The sum of places is 10, the sum of medians is 2000000.0
+
+group 2 took place  6. The sum of places is 12, the sum of medians is 2000000.0
+
+group 4 took place  7. The sum of places is 14, the sum of medians is 2000000.0
+
+group 6 took place  8. The sum of places is 16, the sum of medians is 2000000.0
+
