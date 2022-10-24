@@ -1,0 +1,97 @@
+Running prelim2_2.txt
+
+
+ Group 0: 
+
+7584
+
+7788
+
+7827
+
+Median: 7788.0
+Results of diff:
+
+
+ Group 1: 
+
+
+
+
+Median: 0.0
+Results of diff:
+
+
+ Group 2: 
+
+2841
+
+2814
+
+2824
+
+Median: 2824.0
+Results of diff:
+
+Files outRun2Group2.txt and outRun2Group0.txt differ
+
+ Group 3: 
+
+817
+
+789
+
+860
+
+Median: 817.0
+Results of diff:
+
+
+ Group 4: 
+
+22292
+
+23442
+
+22594
+
+Median: 22594.0
+Results of diff:
+
+Files outRun2Group4.txt and outRun2Group0.txt differ
+
+ Group 5: 
+
+889
+
+894
+
+798
+
+Median: 889.0
+Results of diff:
+
+
+ Group 6: 
+
+7288
+
+7466
+
+7496
+
+Median: 7466.0
+Results of diff:
+
+
+ Group 7: 
+
+8471
+
+8234
+
+8090
+
+Median: 8234.0
+Results of diff:
+
