@@ -1,0 +1,96 @@
+Running final2.txt
+
+
+ Group 0: 
+
+19453
+
+19633
+
+19279
+
+Median: 19453.0
+Results of diff:
+
+
+ Group 1: 
+
+7142
+
+7325
+
+7178
+
+Median: 7178.0
+Results of diff:
+
+Files outRun2Group1.txt and outRun2Group0.txt differ
+
+ Group 2: 
+
+16697
+
+16685
+
+16407
+
+Median: 16685.0
+Results of diff:
+
+
+ Group 3: 
+
+1825
+
+1450
+
+1728
+
+Median: 1728.0
+Results of diff:
+
+
+ Group 4: 
+
+
+
+
+Median: 0.0
+Results of diff:
+
+
+ Group 5: 
+
+1989
+
+1896
+
+2245
+
+Median: 1989.0
+Results of diff:
+
+
+ Group 6: 
+
+11782
+
+11835
+
+12378
+
+Median: 11835.0
+Results of diff:
+
+
+ Group 7: 
+
+20489
+
+20144
+
+20315
+
+Median: 20315.0
+Results of diff:
+
