@@ -8,13 +8,9 @@ Materials and results for the UMN Morris CSci 3501 sorting competition Fall 2022
 * [How do you need to sort the data](#sortingRules)
 * [Setup for sorting](#setup)
 * [Submision deadlines](#deadlines)
-<!---
 * [Scoring](#scoring)
-* [System specs](#specs)
-* [Results of the first preliminary round](#round1)
 * [Results of the final competition](#final)
 * [Presentations](#presentation)
---->
 
 
 ## Goal of the competition <a name="goal"></a>
@@ -91,3 +87,15 @@ The second preliminary round will be in the lab on Monday October 24th (due Sund
 The final competition will be on Thursday November 3rd in the lab (due Wed Nov 2nd)
 
 The dates for other related assignments (code review and presentations) will be announced later. 
+
+## Results <a name="final"></a>
+Here are the results of the final competition:
+   * 1st place: Group 3 Ash and Mason 
+   * 2nd place: Group 5 Josh E and Josh E
+   * 3rd place: Group 2 Conner Hettinger and Nik Bailey
+   * 4th place: Group 6 Blake Johnson
+   * 5th place: Group 7 Luke Burdette
+   * Didn't sort correctly: Group 1 Lloyd and Yubo
+   * Didn't sort correctly: Group 4 Gregory and Ryan (but after a small fix by Ash their code actually works - see Group8 in the final2 folder)
+
+
